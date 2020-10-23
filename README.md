@@ -18,7 +18,7 @@ Go to https://www.mongodb.com/ and make a database
 ```
 Please add the following ones:
 DATABASE (Your database of MongoDb Atlas)
-EMAIL (your email, make sure to enable the less secure apps)
+EMAIL (your email, make sure to enable less secure apps - https://www.google.com/settings/security/lesssecureapps and Disable Captcha temporarily so you can connect the new device/server - https://accounts.google.com/b/0/displayunlockcaptcha)
 KEY (Add anything here for example: secretkey)
 MAILPASSWORD (your email spassword)
 SECRETO (Add anything here for example: supersecret)
