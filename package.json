@@ -4,7 +4,6 @@
   "description": "Proyecto Contact List e EJS.",
   "main": "index.js",
   "dependencies": {
-    "@handlebars/allow-prototype-access": "^1.0.3",
     "axios": "^0.19.2",
     "babel-loader": "^8.0.6",
     "bcrypt": "^5.0.0",
