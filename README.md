@@ -1,10 +1,10 @@
 # contact-list
+Exam: Contact List in Nodejs, MongoDb, EJS.
 Name: Carlos Silvestri.
-Exam: Contact List in Nodejs
 # contact-list
 
 ### A contact list app made with nodejs and ejs
-### Check out in: https://contact-list-silvestri.herokuapp.com/login
+### Check it out in: https://contact-list-silvestri.herokuapp.com/login
 
 ## Project setup
 ```
