@@ -1,0 +1,23 @@
+/* ALERTS */
+.alertas {
+    max-width: 42rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.alerta {
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    color: white;
+    font-weight: 700;
+    padding: .5rem 4rem;
+}
+
+.error {
+    background-color: #f44336;
+}
+
+.exito {
+    background-color: rgb(94, 156, 0);
+}

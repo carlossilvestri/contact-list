@@ -1,0 +1,106 @@
+    <div class="contenedor-barra">
+      <h1>Contact List</h1>
+    </div>
+    <div class="bg-amarillo contenedor sombra">
+      <!-- FORM -->
+      <form id="contacto" action="/new/contact" method="POST">
+        <legend>
+          Add a contact
+          <div class="campos">
+            <div class="campo">
+              <label for="name">First Name:</label>
+              <input
+                type="text"
+                placeholder="Contact's first name"
+                id="firstname"
+                name="firstname"
+                value=""
+              />
+            </div>
+            <div class="campo">
+              <label for="name">Last Name:</label>
+              <input
+                type="text"
+                placeholder="Contact's last name"
+                id="lastname"
+                name="lastname"
+                value=""
+              />
+            </div>
+            <div class="campo">
+              <label for="address">Email:</label>
+              <input
+                type="text"
+                placeholder="Contact's email"
+                id="email"
+                name="email"
+                value=""
+              />
+            </div>
+            <div class="campo">
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                placeholder="Contact's phone"
+                id="phone"
+                name="phone"
+                value=""
+              />
+            </div>
+          </div>
+          <div class="campo enviar">
+            <input type="hidden" id="accion" value="" />
+            <input type="hidden" id="id" value="" />
+            <input type="submit" value="Add" />
+          </div>
+          <!-- END OF THE FORM -->
+        </legend>
+      </form>
+      <!-- END OF THE FORM -->
+    </div>
+    <!-- TABLE -->
+    <div class="bg-blanco contenedor sombra contactos">
+      <div class="contenedor-contactos">
+        <h2>Contacts</h2>
+        <input
+          type="text"
+          id="search"
+          class="buscador sombra"
+          placeholder="Search Contacts by first name, last name or full name..."
+        />
+        <p class="total-contactos"><span><%= contactsCant %></span> Contacts</p>
+
+        <div class="contenedor-tabla">
+          <table id="listado-contactos" class="listado-contactos">
+            <thead>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th></th>
+            </thead>
+            <tbody>
+            <% if(contactsCant > 0){ %>
+                <% contactos.forEach(contacto => { %>
+              <tr>
+              <% const fullname = contacto.firstname + " " + contacto.lastname; %>
+                <td><%= fullname %></td>
+                <td><%= contacto.email %></td>
+                <td><%= contacto.phone %></td>
+                <td>
+                  <a href="contact/<%= contacto._id %>" class="btn-editar btn">
+                    <i class="fas fa-pen-square"></i>
+                  </a>
+                  <a href="delete-contact/<%= contacto._id %>" data-id="<%= contacto._id %>" class="btn-borrar btn delete-contact">
+                    <i class="fas fa-trash-alt"></i>
+                  </a >
+                </td>
+              </tr>
+                <%}); %>
+            <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- END OF THE TABLE -->
+    <h2><a href="logout" class="m-3 btn btn-danger">Logout</a></h2>

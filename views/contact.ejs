@@ -1,0 +1,34 @@
+    <div class="contenedor-barra">
+      <h1>Contact List</h1>
+    </div>
+    <div class="card text-left">
+    <% const fullname =  contact.firstname + ' ' + contact.lastname;  %>
+      <form id="contacto" action="/edit-contact/<%= contact._id %>" method="POST">
+      <div class="card-body">
+        <h4 class="card-title">Edit your contact: <%= fullname %></h4>
+        <div class="form-group">
+          <label for="firstname">Contact's first name </label>
+          <input required type="text"
+            class="form-control" name="firstname" id="firstname" aria-describedby="firstname" placeholder="First Name" value="<%= contact.firstname %>">
+        </div>
+        <div class="form-group">
+          <label for="lastname">Contact's last name </label>
+          <input required type="text"
+            class="form-control" placeholder="Contact's last name"
+                id="lastname"
+                name="lastname"
+                value="<%= contact.lastname %>">
+        </div>
+        <div class="form-group">
+          <label for="email">Contact's email </label>
+          <input required type="email"
+            class="form-control" name="email" id="email" aria-describedby="email" placeholder="email" value="<%= contact.email %>">
+        </div>
+        <div class="form-group">
+          <label for="phone">Contact's phone </label>
+          <input required type="tel"
+            class="form-control" name="phone" id="phone" aria-describedby="phone" placeholder="phone" value="<%= contact.phone %>">
+        </div>
+        <button type="submit" class="btn btn-success" href="#" role="button">Edit</button>
+      </form>
+    </div>
